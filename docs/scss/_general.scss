@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: $font-2;
+    color: $texto-oscuro;
+    transition:  all 0.4s;
+    //background: red;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    height: 100vh;
+    //  background: blue;
+}
+
+.images {
+    //background: red;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_100 {
+        width: 90%;
+    }
+}
+
+.justy-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

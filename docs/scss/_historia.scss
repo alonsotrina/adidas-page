@@ -1,0 +1,41 @@
+.seccion__historia {
+    background: #fafafa;
+    padding: 100px 200px;
+
+    @include phone {
+        padding: 100px 20px;
+
+        .seccion__ocultar {
+            display: none;
+        }
+    }
+
+    .seccion__title {
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 0;
+        font-family: $font-1;
+        font-weight: 800;
+    }
+
+    .seccion__texto {
+        font-size: 14px;
+        line-height: 20px;
+        color: #000;
+        opacity: 70%;
+        margin-bottom: 20px;
+        font-family: $font-2;
+        font-weight: 300;
+    }
+}
+
+
+/// modo dark
+.dark__mode {
+    .seccion__historia {
+        background: rgba(255, 246, 246, 0.055);
+    }
+    .seccion__texto {
+        color: #fff;
+    }
+}

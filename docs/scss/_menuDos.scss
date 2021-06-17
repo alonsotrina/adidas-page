@@ -1,0 +1,25 @@
+.nav_secundary {
+    position: relative;
+    .nav_deporte {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav_box {
+      width: 10%;
+      text-align: center;
+      padding: 25px 0;
+    }
+    i {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 12px;
+      margin: 0;
+    }
+  }
+  

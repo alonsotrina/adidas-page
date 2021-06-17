@@ -1,0 +1,88 @@
+.acordeon__title {
+    background-color: #f1f0f0;
+    cursor: pointer;
+    padding: 18px;
+    transition: 0.4s;
+    display: none;
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-family: $font-1;
+    font-weight: 800;
+
+    @include phone {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &:hover {
+        background: #ccc;
+    }
+
+    &:after {
+        content: '\002B';
+        color: #777;
+        font-weight: bold;
+        float: right;
+        top: 0;
+        font-size: 16px;
+    }
+}
+
+.accordion__active {
+    background-color: #ccc;
+
+    &:after {
+        content: "\2212";
+    }
+}
+
+.accordion__box {
+    padding: 0 20px;
+    background-color: #f1f0f0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+    .accordion__text {
+        padding: 40px 0;
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+        color: #000;
+        opacity: 70%;
+        font-family: $font-2;
+        font-weight: 300;
+
+        &:last-child {
+            padding-top: 0;
+        }
+    }
+}
+
+
+/// modo Dark
+.dark__mode {
+    .acordeon__title {
+        background: #000;
+
+        &:hover {
+            background: rgba(255, 246, 246, 0.055);
+        }
+    }
+
+    .accordion__box {
+        background: #000;
+    }
+
+    .accordion__text {
+        color: #fff;
+    }
+
+    .accordion__active {
+        background: rgba(255, 246, 246, 0.055);
+    }
+}

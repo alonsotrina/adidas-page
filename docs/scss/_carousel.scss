@@ -1,0 +1,158 @@
+.carousel {
+    position: relative;
+
+    .carousel__controladores {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+        line-height: 30px;
+        text-align: center;
+        background: #000;
+        color: #fff;
+
+        &:hover {
+            opacity: 80%;
+            transition: all .3s ease;
+        }
+
+        @include phone {
+            display: none;
+        }
+    }
+
+    .carousel--anterior {
+        position: absolute;
+        bottom: 50%;
+        top: 50%;
+        z-index: 2;
+        left: -20px;
+    }
+
+    .carousel--siguiente {
+        position: absolute;
+        bottom: 50%;
+        right: 0;
+        top: 50%;
+        z-index: 2;
+        right: -20px;
+    }
+}
+
+
+.carousel__lista {
+    overflow: hidden;
+
+    .carousel__elemento {
+        text-align: center;
+        margin: 0 5px;
+        border: solid 1px #fff;
+
+        .carousel__image {
+            background: #fafafa;
+            height: 280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            img {
+                width: 80%;
+            }
+        }
+
+        &:hover {
+            background: #fafafa;
+            transition: all .3s;
+            border: solid 1px #000;
+        }
+
+        .carousel__text {
+            height: 100px;
+            background: #fff;
+            text-align: left;
+            padding: 20px;
+            padding-bottom: 100px;
+
+            h4 {
+                font-size: 14px;
+                color: rgba(0, 0, 0, 0.322);
+            }
+
+            p {
+                font-size: 12px;
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-bottom: 8px;
+                color: #000;
+                opacity: 70%;
+            }
+        }
+    }
+}
+
+.glider-dot {
+    display: block;
+    cursor: pointer;
+    border-radius: 0;
+    color: #000;
+    background: #000;
+    opacity: .2;
+    width: 50px;
+    height: 3px;
+    margin: 0;
+
+    &:hover {
+        opacity: .5;
+    }
+
+    @include phone {
+        width: 15px;
+        height: 4px;
+    }
+}
+
+.glider-dot.active {
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    height: 4px;
+}
+
+
+
+.dark__mode {
+
+    .carousel__controladores {
+        background: #000;
+        border: solid 1px #fff;
+        color: #fff;
+    }
+
+
+    .carousel__elemento {
+        border: solid 1px #000;
+        &:hover {
+            background: $bg-dark;
+            border: solid 1px $color-darkMode;
+        }
+
+        .carousel__text {
+            background: $bg-dark;
+
+            h4 {
+                color: $color-darkMode;
+            }
+
+            p {
+                color: $color-darkMode;
+            }
+        }
+    }
+
+    .glider-dot {
+        color: $color-darkMode;
+        background: $color-darkMode;
+    }
+
+}
